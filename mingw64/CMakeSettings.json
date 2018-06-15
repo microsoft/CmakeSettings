@@ -1,0 +1,47 @@
+{
+  "configurations": [
+    {
+      "environments": [
+        {
+          "environment": "mysql_env",
+          "inheritEnvironments": [ "msvc_x64_x64" ],
+          "PATH": "${env.PATH};F:\\CMake\\mysql-server\\bison\\GnuWin32\\bin"
+        }
+      ],
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [
+        "mysql_env", "msvc_x64_x64"
+      ],
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "CMAKE_TOOLCHAIN_FILE",
+          "value": "F:\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
+        },
+
+        {
+          "name": "VCPKG_TARGET_TRIPLE",
+          "value": "x64-windows-static"
+        },
+        {
+          "name": "WITH_BOOST",
+          "value": "F:\\CMake\\Boost"
+        },
+        {
+          "name": "DOWNLOAD_BOOST",
+          "value": "1"
+        },
+        {
+          "name": "OPENSSL_ROOT_DIR",
+          "value": "F:\\vcpkg\\buildtrees\\openssl\\src\\openssl-1.0.2n"
+        }
+      ]
+    }
+  ]
+}
