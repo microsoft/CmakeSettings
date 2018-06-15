@@ -1,3 +1,26 @@
+# Welcome
+
+This repository contains examples of different CMakeSettings.json for use inside of Visual Studio's Open Folder.
+
+Feel free to add your own CMakeSettings.json for specific scenarios you are interested in sharing. The general format is
+
+- Directory
+	- Readme.md - description of your settings
+	- CMakeSettings.json - your custom settings
+
+
+# More information
+
+For more information on CMakeSettings.json see these:
+
+https://docs.microsoft.com/en-us/cpp/ide/cmake-tools-for-visual-cpp#cmake_settings
+
+https://docs.microsoft.com/en-us/cpp/linux/cmake-linux-project
+
+https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/#configure-cmake
+
+https://blogs.msdn.microsoft.com/vcblog/2017/08/14/cmake-support-in-visual-studio-customizing-your-environment/
+
 
 # Contributing
 
