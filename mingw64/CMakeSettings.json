@@ -1,45 +1,39 @@
 {
   "configurations": [
     {
+      // Test Comment
       "environments": [
         {
-          "environment": "mysql_env",
-          "inheritEnvironments": [ "msvc_x64_x64" ],
-          "PATH": "${env.PATH};F:\\CMake\\mysql-server\\bison\\GnuWin32\\bin"
+          "MINGW64_ROOT": "C:\\msys64\\mingw64",
+          "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
+          "FLAVOR": "x86_64-w64-mingw32",
+          "TOOLSET_VERSION": "7.3.0",
+          "PATH": "${env.MINGW64_ROOT}\\bin;${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
+          "INCLUDE": "${env.INCLUDE};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\tr1;${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\${env.FLAVOR}",
+          "environment": "mingw_64"
         }
       ],
-      "name": "x64-Debug",
+      "name": "Mingw64-Debug",
+      "description": "TemplateDescription_Localize_Mingw64Debug",
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [
-        "mysql_env", "msvc_x64_x64"
+        "mingw_64"
       ],
       "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
       "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": "",
+      "intelliSenseMode": "linux-gcc-x64",
       "variables": [
         {
-          "name": "CMAKE_TOOLCHAIN_FILE",
-          "value": "F:\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
-        },
-
-        {
-          "name": "VCPKG_TARGET_TRIPLE",
-          "value": "x64-windows-static"
+          "name": "CMAKE_C_COMPILER",
+          "value": "${env.BIN_ROOT}\\gcc.exe"
         },
         {
-          "name": "WITH_BOOST",
-          "value": "F:\\CMake\\Boost"
-        },
-        {
-          "name": "DOWNLOAD_BOOST",
-          "value": "1"
-        },
-        {
-          "name": "OPENSSL_ROOT_DIR",
-          "value": "F:\\vcpkg\\buildtrees\\openssl\\src\\openssl-1.0.2n"
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "${env.BIN_ROOT}\\g++.exe"
         }
       ]
     }
