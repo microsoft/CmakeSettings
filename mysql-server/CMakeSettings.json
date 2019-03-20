@@ -26,7 +26,7 @@
         },
 
         {
-          "name": "VCPKG_TARGET_TRIPLE",
+          "name": "VCPKG_TARGET_TRIPLET",
           "value": "x64-windows-static"
         },
         {
